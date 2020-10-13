@@ -15,7 +15,7 @@ There are three main parts in this code:
 2- Least Absolute Deviation Loss
 3- Comparing with Statsmodel
 
-**Section 1: "OLS estimation and plotting" 
+**Section 1: "OLS estimation and plotting"**
 
 Part 1:
 I investigate the relationship between the possum's age and it's tail length by plotting a scatter plot of the age and tailL columns. My plot and my axes are labeld as well. If there are some data that are overlapping, you might need to add an alpha.
@@ -37,4 +37,16 @@ This function is used to estimate the parameters that describe the relationship 
 Using this solution, the data point and the fitted line are plotted.
 
 
-Section 2
+**Section 2: Least Absolute Deviation Loss**
+
+Part 1:
+In the previous section, I worked with the squared loss. Now, wI implement a linear model with least absolute deviation loss.
+
+I wrote a function linearModelLossLAD which computes the least absolute deviation loss function for a linear model parameterized by  𝛽 , as well as the gradient of the loss. This function  takes as its first argument a 1d-array beta of coefficients for the linear model, as its second argument a 2d-array X of data, and as its third argument a 1d-array y of observed outcomes.
+
+Part 2:
+I use linearModelLossLAD to fit a linear model with least absolute deviation loss. The fit is plotted as well.
+
+**Section 3: Comparing With Statsmodels**
+
+Here, I fit both an OLS and a LAD model with statsmodels to compare coefficient estimates, R squared values, and I plot the fits. 
